@@ -7,5 +7,41 @@ import { Component } from '@angular/core';
   styleUrl: './datos.css'
 })
 export class Datos {
-  tittle = 'Página de Data binding'
+  // Variables
+  nombre = 'Mi Aplicación';
+  titulo = 'Bienvenido';
+  colorTexto = '#000000';
+  luzEncendida = false;
+  progreso = 0;
+
+  // Funciones
+  cambiarTitulo() {
+    this.titulo = this.titulo === 'Bienvenido' ? 'Nuevo Título' : 'Bienvenido';
+  }
+
+  alternarColor() {
+    this.colorTexto = this.colorTexto === '#000000' ? '#FF6B6B' : '#000000';
+  }
+
+  alternarLuz() {
+    this.luzEncendida = !this.luzEncendida;
+  }
+
+  aumentarProgreso() {
+    if (this.progreso < 100) {
+      this.progreso += 10;
+    }
+  }
+
+  disminuirProgreso() {
+    if (this.progreso > 0) {
+      this.progreso -= 10;
+    }
+  }
+
+  getProgressColor() {
+    if (this.progreso < 30) return '#ff6b6b';
+    if (this.progreso < 70) return '#feca57';
+    return '#48dbfb';
+  }
 }
