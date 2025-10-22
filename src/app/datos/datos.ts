@@ -7,14 +7,12 @@ import { Component } from '@angular/core';
   styleUrl: './datos.css'
 })
 export class Datos {
-  // Variables
   nombre = 'Mi Aplicación';
   titulo = 'Bienvenido';
   colorTexto = '#000000';
   luzEncendida = false;
   progreso = 0;
 
-  // Funciones
   cambiarTitulo() {
     this.titulo = this.titulo === 'Bienvenido' ? 'Nuevo Título' : 'Bienvenido';
   }
